@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What's for Dinner? - Classic Cheeseburger</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="navbar navbar-expand-md top-nav bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-3 m-0" href="#">
+        <span class="logo-circle">
+          <i class="fa-solid fa-utensils"></i>
+        </span>
+        <span class="site-title-box">
+          <span class="site-title">What's For Dinner</span>
+          <span class="site-subtitle">Your daily meal inspiration</span>
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <div class="nav-links d-flex align-items-center gap-4 ms-md-auto">
+          <div class="nav-item-box" title="Saved">
+            <i class="fa-solid fa-bookmark"></i>
+            <span class="nav-text">Saved Recipes</span>
+          </div>
+
+          <div class="nav-item-box" title="History">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span class="nav-text">Recent</span>
+          </div>
+
+          <div class="nav-item-box" title="Settings">
+            <i class="fa-solid fa-gear"></i>
+            <span class="nav-text">Settings</span>
+          </div>
+
+          <div class="nav-item-box" title="Profile">
+            <span class="profile-pic">
+              <img src="../Habiba-Ahmed-sun-wed-7-10-assignment4-c50-01551702930/images/avatar-2.jpg" alt="Profile" />
+            </span>
+            <span class="nav-text">Profile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-container container">
+    <div class="meal-card row g-0">
+      <div class="col-lg-5 meal-img-col">
+        <div class="meal-img-box" id="imgSection">
+          <img src="./images/burger.png" alt="Classic Cheeseburger" class="meal-img" />
+          <div class="meal-rating">
+            <i class="fa-solid fa-star text-warning"></i>
+            <span>4.9 <small class="text-muted">(482 reviews)</small></span>
+          </div>
+          <div class="meal-stats">
+            <div class="stat-box">
+              <i class="fa-solid fa-clock"></i>
+              <span class="stat-name">Prep Time</span>
+              <span class="stat-num">15 min</span>
+            </div>
+            <div class="stat-box">
+              <i class="fa-solid fa-fire"></i>
+              <span class="stat-name">Cook Time</span>
+              <span class="stat-num">10 min</span>
+            </div>
+            <div class="stat-box">
+              <i class="fa-solid fa-users"></i>
+              <span class="stat-name">Servings</span>
+              <span class="stat-num">2 people</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 p-4 p-md-5 meal-info-col">
+        <div class="meal-scroll">
+          <div id="infoSection">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div class="meal-tags d-flex gap-2">
+                <span class="tag-pill tag-level">Easy</span>
+                <span class="tag-pill tag-type">American</span>
+              </div>
+              <div class="card-btns d-flex gap-2">
+                <button class="btn rounded-2 shadow-sm" type="button">
+                  <i class="fa-regular fa-bookmark"></i>
+                </button>
+                <button class="btn rounded-2 shadow-sm" type="button">
+                  <i class="fa-solid fa-share-nodes"></i>
+                </button>
+              </div>
+            </div>
+            <h2 class="display-6 fw-bold mb-2">Classic Cheeseburger</h2>
+            <p class="text-muted mb-4">
+              Juicy seared beef patty topped with melted cheddar cheese, crisp
+              pickles, onion, ketchup, and mustard on a toasted sesame bun
+            </p>
+            <div class="time-alert d-flex align-items-center d-none" id="prepAlert">
+              <i class="fa-solid fa-triangle-exclamation fs-4"></i>
+              <div>
+                <span class="alert-heading">Extended Preparation Time</span>
+                <span class="alert-desc">This recipe requires more than 45 minutes to prepare. Plan
+                  accordingly!</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="nav nav-tabs mt-4 mb-4" id="recipeTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="ingredients-tab" data-bs-toggle="tab" data-bs-target="#ingredients"
+                type="button" role="tab">
+                <i class="fa-solid fa-list-ul"></i> Ingredients
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="instructions-tab" data-bs-toggle="tab" data-bs-target="#instructions"
+                type="button" role="tab">
+                <i class="fa-solid fa-book-open"></i> Instructions
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="nutrition-tab" data-bs-toggle="tab" data-bs-target="#nutrition" type="button"
+                role="tab">
+                <i class="fa-solid fa-chart-pie"></i> Nutrition
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tips-tab" data-bs-toggle="tab" data-bs-target="#tips" type="button"
+                role="tab">
+                <i class="fa-solid fa-lightbulb"></i> Chef's Tips
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content tabs-scroll" id="recipeTabsContent">
+            <div class="tab-pane fade show active" id="ingredients" role="tabpanel">
+              <ul class="items-list" id="ingredientsList">
+                <li class="list-row">
+                  <div class="step-num">1</div>
+                  300g ground beef (80/20 lean-to-fat ratio)
+                </li>
+                <li class="list-row">
+                  <div class="step-num">2</div>
+                  2 sesame burger buns
+                </li>
+                <li class="list-row">
+                  <div class="step-num">3</div>
+                  2 slices cheddar cheese
+                </li>
+                <li class="list-row">
+                  <div class="step-num">4</div>
+                  1/4 cup dill pickle slices
+                </li>
+                <li class="list-row">
+                  <div class="step-num">5</div>
+                  1/4 white onion, thinly sliced
+                </li>
+                <li class="list-row">
+                  <div class="step-num">6</div>
+                  2 tbsp ketchup &amp; 1 tbsp yellow mustard
+                </li>
+                <li class="list-row">
+                  <div class="step-num">7</div>
+                  1 tbsp butter (for toasting buns)
+                </li>
+                <li class="list-row">
+                  <div class="step-num">8</div>
+                  1 tsp kosher salt &amp; 1/2 tsp black pepper
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-pane fade" id="instructions" role="tabpanel">
+              <ul class="steps-list" id="instructionsList">
+                <li class="list-row">
+                  <div class="step-num">1</div>
+                  Divide the ground beef into two equal portions and gently
+                  shape into patties slightly wider than the buns.
+                </li>
+                <li class="list-row">
+                  <div class="step-num">2</div>
+                  Season both sides of each patty generously with salt and
+                  black pepper.
+                </li>
+                <li class="list-row">
+                  <div class="step-num">3</div>
+                  Melt butter in a skillet over medium heat and toast the cut
+                  sides of the buns for 1–2 minutes until golden.
+                </li>
+                <li class="list-row">
+                  <div class="step-num">4</div>
+                  Heat the skillet over high heat until smoking hot, then sear
+                  the patties for 3–4 minutes per side.
+                </li>
+                <li class="list-row">
+                  <div class="step-num">5</div>
+                  Place a slice of cheddar cheese on each patty during the
+                  last minute of cooking and cover until melted.
+                </li>
+                <li class="list-row">
+                  <div class="step-num">6</div>
+                  Assemble the burger with ketchup, mustard, pickles, onion, and
+                  the toasted buns, then serve warm.
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-pane fade" id="nutrition" role="tabpanel">
+              <div class="nutrition-box" id="nutritionGrid">
+                <div class="nut-card">
+                  <div class="nut-left">
+                    <div class="nut-icon bg-warning">
+                      <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <span class="text-muted">Calories</span>
+                  </div>
+                  <span class="fw-bold">540 kcal</span>
+                </div>
+                <div class="nut-card">
+                  <div class="nut-left">
+                    <div class="nut-icon bg-primary">
+                      <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <span class="text-muted">Protein</span>
+                  </div>
+                  <span class="fw-bold">29g</span>
+                </div>
+                <div class="nut-card">
+                  <div class="nut-left">
+                    <div class="nut-icon bg-info">
+                      <i class="fa-solid fa-wheat-awn"></i>
+                    </div>
+                    <span class="text-muted">Carbohydrates</span>
+                  </div>
+                  <span class="fw-bold">34g</span>
+                </div>
+                <div class="nut-card">
+                  <div class="nut-left">
+                    <div class="nut-icon bg-danger">
+                      <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <span class="text-muted">Fat</span>
+                  </div>
+                  <span class="fw-bold">31g</span>
+                </div>
+                <div class="nut-card">
+                  <div class="nut-left">
+                    <div class="nut-icon bg-success">
+                      <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <span class="text-muted">Fiber</span>
+                  </div>
+                  <span class="fw-bold">2g</span>
+                </div>
+                <div class="nut-card">
+                  <div class="nut-left">
+                    <div class="nut-icon bg-secondary">
+                      <i class="fa-solid fa-cube"></i>
+                    </div>
+                    <span class="text-muted">Sodium</span>
+                  </div>
+                  <span class="fw-bold">890mg</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="tips" role="tabpanel">
+              <div id="tipsList">
+                <div class="tip-box">
+                  <i class="fa-solid fa-circle-check tip-icon"></i><span>Avoid overworking the meat when shaping patties
+                    so they
+                    stay tender and juicy.</span>
+                </div>
+                <div class="tip-box">
+                  <i class="fa-solid fa-circle-check tip-icon"></i><span>Press a slight dimple in the center of each
+                    patty to
+                    prevent puffing while cooking.</span>
+                </div>
+                <div class="tip-box">
+                  <i class="fa-solid fa-circle-check tip-icon"></i><span>Do not press down on the patties with a
+                    spatula, as it
+                    squeezes out flavorful juices.</span>
+                </div>
+                <div class="tip-box">
+                  <i class="fa-solid fa-circle-check tip-icon"></i><span>Rest the cooked patties for 2 minutes before
+                    assembling
+                    the burger.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-try mt-4" type="button">
+          <i class="fa-solid fa-arrows-rotate"></i> Try Another Recipe
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
